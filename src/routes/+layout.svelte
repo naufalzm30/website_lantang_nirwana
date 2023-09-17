@@ -1,6 +1,7 @@
 <script>
     import "../app.css";
     import logo from '$lib/asset/logo-kuning.png';
+    import { base } from '$app/paths';
 </script>
 
 <body class="bg-biru-lantang relative min-h-screen  ">
@@ -8,11 +9,11 @@
     <nav class="bg-biru-lantang inline-flex gap-6">
         <img src="{logo}" class="h-logo w-logo ml-logo-kiri mt-logo-atas" alt="">
         <div class="w-divider-nav h-divider-nav bg-putih-lantang mt-divider-atas mb-divider-bawah"></div>
-        <a href="/" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >HOME</a>
-        <a href="/lirik" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >LYRICS</a>
-        <a href="/jadwal" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >SCHEDULE</a>
-        <a href="/stories" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >STORIES</a>
-        <a href="/about_me" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >ABOUT ME</a>
+        <a href="{ base }/" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >HOME</a>
+        <a href="{ base }/lirik" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >LYRICS</a>
+        <a href="{ base }/jadwal" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >SCHEDULE</a>
+        <a href="{ base }/stories" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >STORIES</a>
+        <a href="{ base }/about_me" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >ABOUT ME</a>
     
         
     

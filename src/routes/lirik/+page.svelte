@@ -25,7 +25,7 @@
         "utarakan.png":utarakan,
         "it took me two years.png":it_took_me_two_years
     };
-    
+    import { base } from '$app/paths';
 
 // let liriknya =  document.getElementById("liriknya")
 // document.body.innerHTML += songs[0].lirik
@@ -48,7 +48,7 @@
             <img class="w-[110px] h-[110px] absolute border-3 border-black" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
         </div>
         <p>{@html (song.judul)}</p>
-        <a href='/lirik/{song._id}'><button class="bg-kuning-lantang rounded-lg p-1 pl-3 pr-3 drop-shadow-lg focus:ring-3 ring-kuning-ring shadow-lg transform active:scale-90 hover:scale-110 transition-transform ">view more</button></a> <!-- <p>{(song.thumbnail)}</p> -->
+        <a href='{base}/lirik/{song._id}'><button class="bg-kuning-lantang rounded-lg p-1 pl-3 pr-3 drop-shadow-lg focus:ring-3 ring-kuning-ring shadow-lg transform active:scale-90 hover:scale-110 transition-transform ">view more</button></a> <!-- <p>{(song.thumbnail)}</p> -->
         
     </div>
     {/each}

@@ -1,7 +1,7 @@
 import {songs} from "$db/songs"
 import type { PageServerLoad } from "./$types";
 export const prerender = true;
-
+export const trailingSlash = 'always'; 
 
 export const load: PageServerLoad =async function () {
     const data = await songs.find({}, {projection:{

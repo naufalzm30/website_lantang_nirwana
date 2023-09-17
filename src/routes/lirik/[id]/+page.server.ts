@@ -3,7 +3,7 @@ import type { PageServerLoad } from "./$types";
 import { ObjectId } from 'mongodb'
 
 export const prerender = true;
-
+export const trailingSlash = 'always'; 
 
 export const load: PageServerLoad =async function ({params}) {
     const id = new ObjectId(params.id);

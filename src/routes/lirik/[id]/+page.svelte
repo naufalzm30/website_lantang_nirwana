@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { stringify } from 'postcss';
-
+    export const prerender = true;
+export const trailingSlash = 'always'; 
 
 import type {PageData} from './$types';
 export let data: PageData;
@@ -24,6 +25,8 @@ let thumbnail_lirik= {
     "it took me two years.png":it_took_me_two_years
 };
 
+import { base } from '$app/paths';
+
 // let liriknya =  document.getElementById("liriknya")
 // document.body.innerHTML += songs[0].lirik
 
@@ -32,7 +35,7 @@ let thumbnail_lirik= {
 </script>
 <div class="w-[40%]  bg-putih-lantang rounded-lg px-10 py-5">
     <br>
-    <a href="/lirik" class="w-20 block"><img src="{back_black}" class="block w-20 active:scale-90 hover:scale-110 transition-transform" alt=""></a> 
+    <a href="{ base }/lirik" class="w-20 block"><img src="{back_black}" class="block w-20 active:scale-90 hover:scale-110 transition-transform" alt=""></a> 
     
     <div class="w-full flex justify-center">
         <img class="w-[200px] object-center" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
