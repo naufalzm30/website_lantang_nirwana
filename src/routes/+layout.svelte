@@ -1,11 +1,12 @@
 <script>
     import "../app.css";
+    import logo from '$lib/asset/logo-kuning.png';
 </script>
 
 <body class="bg-biru-lantang relative min-h-screen  ">
 
     <nav class="bg-biru-lantang inline-flex gap-6">
-        <img src="/src/asset/logo-kuning.png" class="h-logo w-logo ml-logo-kiri mt-logo-atas" alt="">
+        <img src="{logo}" class="h-logo w-logo ml-logo-kiri mt-logo-atas" alt="">
         <div class="w-divider-nav h-divider-nav bg-putih-lantang mt-divider-atas mb-divider-bawah"></div>
         <a href="/" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >HOME</a>
         <a href="/lirik" class="mt-menu-nav-atas mb-menu-nav-bawah text-putih-lantang active:underline font-Helvetica font-bold" >LYRICS</a>

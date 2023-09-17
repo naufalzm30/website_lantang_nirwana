@@ -1,6 +1,12 @@
+<script>
+  import about from '$lib/asset/foto_nga_ada.png';
+  let hehe= {"about.png":about};
+</script>
+
 
 <div class="min-w-full flex justify-center items-center gap-56 ">
-    <img src="/src/asset/foto_nga_ada.png" class=" align-middle max-w-[30%]" alt="">
+ 
+    <img src="{hehe["about.png"]}" class=" align-middle max-w-[30%]" alt="">
     <p class="flex  font-Helvetica text-putih-lantang text-2xl ">
     Hai, I’m Lantang Nirwana<br>
     a musician/programmer from Bandung.<br>

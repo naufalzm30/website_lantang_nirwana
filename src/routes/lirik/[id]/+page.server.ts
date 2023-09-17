@@ -2,7 +2,7 @@ import {songs} from "$db/songs"
 import type { PageServerLoad } from "./$types";
 import { ObjectId } from 'mongodb'
 
-
+export const prerender = true;
 
 
 export const load: PageServerLoad =async function ({params}) {
@@ -20,8 +20,8 @@ export const load: PageServerLoad =async function ({params}) {
     // }
 
     
-    console.log(JSON.parse(JSON.stringify(data)));
-    console.log(params.id);
+    // console.log(JSON.parse(JSON.stringify(data)));
+    // console.log(params.id);
     return {
             song: JSON.parse(JSON.stringify(data))
         }
