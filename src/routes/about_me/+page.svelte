@@ -1,7 +1,7 @@
 
 <div class="min-w-full flex justify-center items-center gap-56 ">
     <img src="/src/asset/foto_nga_ada.png" class=" align-middle max-w-[30%]" alt="">
-    <p class="flex  font-Helvetica text-putih-lantang">
+    <p class="flex  font-Helvetica text-putih-lantang text-2xl ">
     Hai, I’m Lantang Nirwana<br>
     a musician/programmer from Bandung.<br>
     Oh and yeah, i code this website by myself hahaha.<br>
@@ -11,7 +11,7 @@
     <br>
     <br>   
     with love, from me, to you.<br>
-    (i know, its the beatles song)
+    (i know, its The Beatles song)
     </p>
         
 </div>
