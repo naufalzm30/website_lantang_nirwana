@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { stringify } from 'postcss';
-    export const prerender = true;
-export const trailingSlash = 'always'; 
 
 import type {PageData} from './$types';
 export let data: PageData;
