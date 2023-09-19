@@ -7,6 +7,9 @@
     import type { HTMLAttributes } from 'svelte/elements';
 
     let isActive = true;
+    
+    export const prerender = true;
+    export const trailingSlash = 'always'; 
 ;
 
     // onMount(() => {
@@ -38,7 +41,7 @@
         
     <div class="flex md:order-0 lg:ml-logo-kiri lg:mt-logo-atas md:mt-logo-atas md:justify-center md:m-0 ml-5 mt-3 ">
 
-        <img src="{logo}" class=" md:w-[13.6rem] sm:h-fit w-[9.6rem]  " alt="">
+        <img src="{logo}" class=" md:w-[13.6rem] w-[9.6rem] aspect-auto  " alt="">
     </div>
     
       
@@ -55,11 +58,11 @@
     </div>
 
     <div id="menu" class:hidden={isActive} class="absolute flex flex-col pt-10 pl-5 z-10 w-full h-72 bg-kuning-lantang text-black  font-Helvetica font-bold  gap-6 ">
-        <a href="{ base }/" class="hover:underline w-fit" >HOME</a>
-        <a href="{ base }/lirik" class="hover:underline w-fit" >LYRICS</a>
-        <a href="{ base }/jadwal" class="hover:underline w-fit" >SCHEDULE</a>
-        <a href="{ base }/stories" class="hover:underline w-fit" >STORIES</a>
-        <a href="{ base }/about_me" class=" hover:underline w-fit" >ABOUT ME</a>
+        <a href="{ base }/" class="hover:underline w-fit" on:click={() => isActive = !isActive} >HOME</a>
+        <a href="{ base }/lirik" class="hover:underline w-fit" on:click={() => isActive = !isActive} >LYRICS</a>
+        <a href="{ base }/jadwal" class="hover:underline w-fit" on:click={() => isActive = !isActive} >SCHEDULE</a>
+        <a href="{ base }/stories" class="hover:underline w-fit" on:click={() => isActive = !isActive} >STORIES</a>
+        <a href="{ base }/about_me" class=" hover:underline w-fit" on:click={() => isActive = !isActive} >ABOUT ME</a>
     </div>
 
     <!-- class:hidden={isActive} -->
