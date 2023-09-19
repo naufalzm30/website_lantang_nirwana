@@ -4,10 +4,10 @@
 </script>
 
 
-<div class="min-w-full flex justify-center items-center gap-56 ">
+<div class="min-w-full flex justify-center items-center xl:gap-30 xl:flex-row flex-col gap-14 ">
  
-    <img src="{hehe["about.png"]}" class=" align-middle max-w-[30%]" alt="">
-    <p class="flex  font-Helvetica text-putih-lantang text-2xl ">
+    <img src="{hehe["about.png"]}" class="mt-14 align-middle max-w-[30%] md:mt-5" alt="">
+    <p class="flex  font-Helvetica text-putih-lantang xl:text-2xl ">
     Hai, I’m Lantang Nirwana<br>
     a musician/programmer from Bandung.<br>
     Oh and yeah, i code this website by myself hahaha.<br>

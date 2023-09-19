@@ -31,18 +31,19 @@ import { base } from '$app/paths';
 
 
 </script>
-<div class="w-[40%]  bg-putih-lantang rounded-lg px-10 py-5">
+<div class="w-[18rem] sm:w-[30rem] md:w-[37rem] lg:w-[55rem] bg-putih-lantang rounded-lg px-5 ">
     <br>
-    <a href="{ base }/lirik" class="w-20 block"><img src="{back_black}" class="block w-20 active:scale-90 hover:scale-110 transition-transform" alt=""></a> 
+    <a href="{ base }/lirik" class="w-20 md:w-24 block">
+        <img src="{back_black}" class="block w-14 md:w-24 active:scale-90 hover:scale-110 transition-transform" alt=""></a> 
     
-    <div class="w-full flex justify-center">
-        <img class="w-[200px] object-center" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
+    <div class=" flex justify-center">
+        <img class="w-60  object-center" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
     </div>
     
     <p class="text-3xl font-bold text-center " >{@html (song.judul)} </p> 
     <br>
     <br>
-    <p class="text-xl" >{@html (song.lirik)}</p>   
+    <p class="text-lg ml-2 md:ml-5 " >{@html (song.lirik)}</p>   
     <br>
     <br>    
 </div>

@@ -7,7 +7,7 @@
     <!-- <div class="border-4 align-baseline border-green-400 max-w-[30%] "> -->
         
         <div class="">
-            <img src="{page_lirik}" class="w-96" alt="">
+            <img src="{page_lirik}" class="md:w-96 w-60 mt-10 " alt="">
         </div>
 
         <slot>
