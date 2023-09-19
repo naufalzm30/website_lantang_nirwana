@@ -38,7 +38,7 @@
         
     <div class="flex md:order-0 lg:ml-logo-kiri lg:mt-logo-atas md:mt-logo-atas md:justify-center md:m-0 ml-5 mt-3 ">
 
-        <img src="{logo}" class=" md:w-[13.6rem] md:h-fit w-[9.6rem]  " alt="">
+        <img src="{logo}" class=" md:w-[13.6rem] sm:h-fit w-[9.6rem]  " alt="">
     </div>
     
       
@@ -46,7 +46,7 @@
 
     <div class="lg:inline-flex hidden md:order-2  w-divider-nav h-divider-nav bg-putih-lantang mt-divider-atas mb-divider-bawah"></div>
     
-    <div id="menu" class:hidden={isActive} class:h-screen={isActive} class="sm:h-fit lg:inline-flex  md:order-3 lg:mt-menu-nav-atas md:mt-5 md:mb-10 lg:mb-menu-nav-bawah md:inline-flex md:justify-center text-putih-lantang  font-Helvetica font-bold  gap-6 ">
+    <div id="menu"  class=" hidden sm:h-fit lg:inline-flex  md:order-3 lg:mt-menu-nav-atas md:mt-5 md:mb-10 lg:mb-menu-nav-bawah md:inline-flex md:justify-center text-putih-lantang  font-Helvetica font-bold  gap-6 ">
         <a href="{ base }/" class="hover:underline" >HOME</a>
         <a href="{ base }/lirik" class="hover:underline" >LYRICS</a>
         <a href="{ base }/jadwal" class="hover:underline" >SCHEDULE</a>
@@ -54,7 +54,15 @@
         <a href="{ base }/about_me" class=" hover:underline" >ABOUT ME</a>
     </div>
 
-    
+    <div id="menu" class:hidden={isActive} class="absolute flex flex-col pt-10 pl-5 z-10 w-full h-72 bg-kuning-lantang text-black  font-Helvetica font-bold  gap-6 ">
+        <a href="{ base }/" class="hover:underline w-fit" >HOME</a>
+        <a href="{ base }/lirik" class="hover:underline w-fit" >LYRICS</a>
+        <a href="{ base }/jadwal" class="hover:underline w-fit" >SCHEDULE</a>
+        <a href="{ base }/stories" class="hover:underline w-fit" >STORIES</a>
+        <a href="{ base }/about_me" class=" hover:underline w-fit" >ABOUT ME</a>
+    </div>
+
+    <!-- class:hidden={isActive} -->
     
     <div class="flex items-center md:hidden mr-7 z-10">
         <button class="text-biru-lantang text-4xl font-bold opacity-100 hover:opacity-100 duration-300"
