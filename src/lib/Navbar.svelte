@@ -58,7 +58,7 @@
     </div>
 
     <div id="menu" class:hidden={isActive} class="absolute flex flex-col pt-10 pl-5 z-10 w-full h-72 bg-kuning-lantang text-black  font-Helvetica font-bold  gap-6 ">
-        <a href="{ base }/" class="hover:underline w-fit" on:click={() => isActive = !isActive} >HOME</a>
+        <a href="{ base }/" class="hover:underline focus:underline w-fit" on:click={() => isActive = !isActive} >HOME</a>
         <a href="{ base }/lirik" class="hover:underline w-fit" on:click={() => isActive = !isActive} >LYRICS</a>
         <a href="{ base }/jadwal" class="hover:underline w-fit" on:click={() => isActive = !isActive} >SCHEDULE</a>
         <a href="{ base }/stories" class="hover:underline w-fit" on:click={() => isActive = !isActive} >STORIES</a>

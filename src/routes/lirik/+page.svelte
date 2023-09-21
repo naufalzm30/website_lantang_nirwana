@@ -17,7 +17,19 @@
     import utarakan from '$lib/asset/utarakan.png';
     import it_took_me_two_years from '$lib/asset/it took me two years.png';
 
-    export let thumbnail_lirik= {
+    
+
+    // it_wont_be_long: string;
+    //     not_yours: string;
+    //     you_left_me_again: string;
+    //     biar_kuantar_kau_pulang: string;
+    //     utarakan: string;
+    //     it_took_me_two_years: string;
+
+    // var hello_associated_array: AssociativeArray[] = []
+    // "it wont be long.png":it_wont_be_long
+
+    let thumbnail_lirik={
         "it wont be long.png":it_wont_be_long,
         "not yours.png":not_yours,
         "you left me again.png":you_left_me_again,
@@ -25,6 +37,9 @@
         "utarakan.png":utarakan,
         "it took me two years.png":it_took_me_two_years
     };
+
+    export const map = new Map<string, string>(Object.entries(thumbnail_lirik));
+
     import { base } from '$app/paths';
 
 // let liriknya =  document.getElementById("liriknya")
@@ -45,7 +60,7 @@
                 
             </svg>
             
-            <img class="w-[6rem]  absolute border-3 border-black" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
+            <img class="w-[6rem]  absolute border-3 border-black" src="{map.get((song.thumbnail))}" alt="">
         </div>
         <p>{@html (song.judul)}</p>
         <a href='{base}/lirik/{song._id}/'><button class="bg-kuning-lantang rounded-lg p-1 pl-3 pr-3 drop-shadow-lg focus:ring-3 ring-kuning-ring shadow-lg transform active:scale-90 hover:scale-110 transition-transform ">view more</button></a> <!-- <p>{(song.thumbnail)}</p> -->

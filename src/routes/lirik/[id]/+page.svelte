@@ -23,6 +23,8 @@ let thumbnail_lirik= {
     "it took me two years.png":it_took_me_two_years
 };
 
+export const map = new Map<string, string>(Object.entries(thumbnail_lirik));
+
 import { base } from '$app/paths';
 
 // let liriknya =  document.getElementById("liriknya")
@@ -37,7 +39,7 @@ import { base } from '$app/paths';
         <img src="{back_black}" class="block w-14 md:w-24 active:scale-90 hover:scale-110 transition-transform" alt=""></a> 
     
     <div class=" flex justify-center">
-        <img class="w-60  object-center" src="{thumbnail_lirik[(song.thumbnail)]}" alt="">
+        <img class="w-60  object-center" src="{map.get((song.thumbnail))}" alt="">
     </div>
     
     <p class="text-3xl font-bold text-center " >{@html (song.judul)} </p> 
