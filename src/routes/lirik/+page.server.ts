@@ -1,16 +1,25 @@
-import {songs} from "$db/songs"
-import type { PageServerLoad } from "./$types";
+// import { songs } from '$db/songs';
+import type { PageServerLoad } from './$types';
 export const prerender = true;
-export const trailingSlash = 'always'; 
+export const trailingSlash = 'always';
 
-export const load: PageServerLoad =async function () {
-    const data = await songs.find({}, {projection:{
-        _id:1, judul:1, lirik:1, thumbnail:1
-    }}).toArray();
-    // console.log(JSON.parse(JSON.stringify(data)));
+type songs = {
+    _id: Object;
+    judul: string;
+    lirik: string;
+    story: string;
+    thumbnail: string;
+};
+
+type t = {
+    songs: songs[];
+};
+
+export const load: PageServerLoad = async function () {
+    const r = await fetch('http://localhost:8080/songs/get');
+    const hasil_songs = ((await r.json()) as t).songs; // we only want to send the todo array as props
+    console.log(hasil_songs);
     return {
-            songs: JSON.parse(JSON.stringify(data))
-        }
-    
-}
-
+        hasil_songs
+    };
+};

@@ -1,29 +1,27 @@
-import {songs} from "$db/songs"
-import type { PageServerLoad } from "./$types";
-import { ObjectId } from 'mongodb'
+// import { songs } from '$db/songs';
+import type { PageServerLoad } from './$types';
+import { ObjectId } from 'mongodb';
 
 export const prerender = true;
-export const trailingSlash = 'always'; 
+export const trailingSlash = 'always';
 
-export const load: PageServerLoad =async function ({params}) {
-    const id = new ObjectId(params.id);
+type song = {
+    song: {
+        _id: Object;
+        judul: string;
+        lirik: string;
+        story: string;
+        thumbnail: string;
+    };
+};
 
-    const data = await songs.findOne({_id:id}, {projection:{
-        _id:1, judul:1, lirik:1, thumbnail:1
-    }});
-
-    // const query = {_id:params.id};
-    // const cursor = songs.find(query);
-
-    // for await (const data of cursor) {
-    //     console.dir(data);
-    // }
-
-    
-    // console.log(JSON.parse(JSON.stringify(data)));
-    // console.log(params.id);
+export const load: PageServerLoad = async function ({ params }) {
+    const id = new String(params.id);
+    console.log(`http://localhost:8080/songs/get/${id}`);
+    const r = await fetch(`http://localhost:8080/songs/get/${id}`);
+    const hasil_songs = ((await r.json()) as song).song;
+    // console.log(hasil_songs);
     return {
-            song: JSON.parse(JSON.stringify(data))
-        }
-    
-}
+        hasil_songs
+    };
+};
